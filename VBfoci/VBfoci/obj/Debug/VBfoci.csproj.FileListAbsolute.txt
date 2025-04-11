@@ -1,0 +1,15 @@
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\bin\Debug\VBfoci.exe.config
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\bin\Debug\VBfoci.exe
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\bin\Debug\VBfoci.pdb
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.csproj.AssemblyReference.cache
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\MainWindow.g.cs
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\App.g.cs
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci_MarkupCompile.cache
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci_MarkupCompile.lref
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\MainWindow.baml
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.g.resources
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.Properties.Resources.resources
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.csproj.GenerateResource.cache
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.csproj.CoreCompileInputs.cache
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.exe
+C:\Users\palpet478\Desktop\VBFoci_KTPalPet\VBfoci\VBfoci\obj\Debug\VBfoci.pdb
