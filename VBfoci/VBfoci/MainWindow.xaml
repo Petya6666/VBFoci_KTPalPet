@@ -5,28 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VBfoci"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="33,92,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="270,103,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="553,137,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="270,294,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="22" Margin="270,402,0,0" VerticalAlignment="Top" Width="172"/>
+        Title="MainWindow" Height="500" Width="800">
+    <Grid RenderTransformOrigin="0.564,0.373">
+        <Button Content="Beolvasás" HorizontalAlignment="Left" Height="22" Margin="33,92,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button Content="Kiírás" HorizontalAlignment="Left" Height="22" Margin="257,103,0,0" VerticalAlignment="Top" Width="185"/>
+        <Button Content="Keresés" HorizontalAlignment="Left" Height="22" Margin="553,137,0,0" VerticalAlignment="Top" Width="172"/>
+        <Button Content="Megszámolás" HorizontalAlignment="Left" Height="22" Margin="257,294,0,0" VerticalAlignment="Top" Width="185"/>
+        <Button Content="Minimum / Maximum kiválasztása" HorizontalAlignment="Left" Height="22" Margin="257,402,0,0" VerticalAlignment="Top" Width="185"/>
         <TextBox HorizontalAlignment="Left" Height="276" Margin="33,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172"/>
-        <Image HorizontalAlignment="Left" Height="179" Margin="507,240,0,0" VerticalAlignment="Top" Width="264" Source="https://www.revuepolitique.fr/wp-content/uploads/2022/11/shutterstock_2190840355-1.jpg"/>
+        <Image HorizontalAlignment="Left" Height="208" Margin="488,217,0,0" VerticalAlignment="Top" Width="294" Source="https://www.revuepolitique.fr/wp-content/uploads/2022/11/shutterstock_2190840355-1.jpg"/>
         <TextBox HorizontalAlignment="Left" Height="18" Margin="33,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="270,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172"/>
+        <TextBox HorizontalAlignment="Left" Height="18" Margin="257,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="185"/>
         <TextBox HorizontalAlignment="Left" Height="18" Margin="553,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172"/>
-        <ComboBox HorizontalAlignment="Left" Height="28" Margin="270,368,0,0" VerticalAlignment="Top" Width="172">
+        <ComboBox HorizontalAlignment="Left" Height="28" Margin="257,368,0,0" VerticalAlignment="Top" Width="185">
             <ComboBoxItem Content="Minimum"/>
             <ComboBoxItem Content="Maximum"/>
         </ComboBox>
         <Label Content="Beolvasandó fájl neve:" HorizontalAlignment="Left" Height="27" Margin="33,23,0,0" VerticalAlignment="Top" Width="172" FontWeight="Bold"/>
-        <Label Content="Fájl neve kiíráshoz:" HorizontalAlignment="Left" Height="28" Margin="270,36,0,0" VerticalAlignment="Top" Width="172" FontWeight="Bold"/>
-        <Label Content="Ország  keresése:" HorizontalAlignment="Left" Height="35" Margin="553,59,0,0" VerticalAlignment="Top" Width="172"/>
-        <GroupBox HorizontalAlignment="Left" Height="127" Header="Mit számoljunk?" Margin="276,148,0,0" VerticalAlignment="Top" Width="166" Grid.RowSpan="2" Grid.ColumnSpan="2">
-            <RadioButton Content="RadioButton" HorizontalAlignment="Left" Height="17" Width="100" VerticalAlignment="Top"/>
+        <Label Content="Fájl neve kiíráshoz:" HorizontalAlignment="Left" Height="28" Margin="248,36,0,0" VerticalAlignment="Top" Width="194" FontWeight="Bold"/>
+        <Label Content="Ország keresése:" HorizontalAlignment="Left" Height="35" Margin="545,59,0,0" VerticalAlignment="Top" Width="180"/>
+        <GroupBox HorizontalAlignment="Left" Height="127" Header="Mit számoljunk?" Margin="257,148,0,0" VerticalAlignment="Top" Width="185">
+            <StackPanel HorizontalAlignment="Left" Height="102" VerticalAlignment="Top" Width="156">
+                <RadioButton Content="RadioButton" HorizontalAlignment="Left"/>
+                <RadioButton Content="RadioButton" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </StackPanel>
         </GroupBox>
+        <CheckBox Content="Találatok kijelölése a listában" HorizontalAlignment="Left" Height="18" Margin="553,114,0,0" VerticalAlignment="Top" Width="172"/>
+        <Label Content="Minimum vagy maximum?" HorizontalAlignment="Left" Height="25" Margin="257,338,0,0" VerticalAlignment="Top" Width="169"/>
 
     </Grid>
 </Window>
