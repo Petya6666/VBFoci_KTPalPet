@@ -20,8 +20,6 @@ namespace VBfoci
                Helyezes = int.Parse(adatok[1]);
                VB_Idopont = int.Parse(adatok[2]);
                VB_Hely = adatok[3];
-        
-        
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,17 @@ namespace VBfoci
         public MainWindow()
         {
             InitializeComponent();
+            List<Resztvevo> resztvevok = new List<Resztvevo>();
+            StreamReader sr = new StreamReader("VBfoci.csv");
+
+
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                resztvevok.Add(new Resztvevo(line));
+            }
+            sr.Close();
+
         }
     }
 }
