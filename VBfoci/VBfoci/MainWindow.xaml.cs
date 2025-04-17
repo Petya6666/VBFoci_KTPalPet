@@ -38,6 +38,20 @@ namespace VBfoci
             }
             sr.Close();
             beolvasTxtBx.Text = "A beolvasás sikeresen megtörtént.";
+            int min = resztvevok.Min(r => r.VB_Idopont);
+            beolvasTxtBx.Text += $"\nLegrégebbi VB: {min}";
+
+            int szamlalo = 0;
+            int osszeseredmeny = 0;
+            for (int i = 0; i < resztvevok.Count; i++)
+            {
+                if (resztvevok[i].Orszag == "Magyarország")
+                {
+                    szamlalo++;
+                    osszeseredmeny += resztvevok[i].Helyezes;
+                }
+            }
+            beolvasTxtBx.Text += $"\nMagyaroszág átlaghelyezése: {osszeseredmeny/szamlalo}";
         }
 
         private void kiirasBtn_Click(object sender, RoutedEventArgs e)
