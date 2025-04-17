@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -50,7 +50,21 @@
               "RelativeToolTip": "VBfoci\\Resztvevo.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:25:38.235Z"
+              "WhenOpened": "2025-04-17T12:25:38.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\github repos\\VBFoci_KTPalPet\\VBfoci\\VBfoci\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "VBfoci\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\github repos\\VBFoci_KTPalPet\\VBfoci\\VBfoci\\MainWindow.xaml.cs",
+              "RelativeToolTip": "VBfoci\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwGAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T12:25:48.788Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -62,19 +76,6 @@
               "RelativeToolTip": "VBfoci\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-17T12:25:38.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "E:\\github repos\\VBFoci_KTPalPet\\VBfoci\\VBfoci\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "VBfoci\\MainWindow.xaml.cs",
-              "ToolTip": "E:\\github repos\\VBFoci_KTPalPet\\VBfoci\\VBfoci\\MainWindow.xaml.cs",
-              "RelativeToolTip": "VBfoci\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAApwDUAAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T12:25:48.788Z",
               "EditorCaption": ""
             }
           ]

@@ -5,33 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VBfoci"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800">
-    <Grid RenderTransformOrigin="0.564,0.373">
+        Title="MainWindow" Height="480
+        " Width="800">
+    <Grid RenderTransformOrigin="0.564,0.373" Margin="0,0,0,18">
         <Button x:Name="beolvasBtn" Content="Beolvasás" HorizontalAlignment="Left" Height="22" Margin="33,92,0,0" VerticalAlignment="Top" Width="172" Click="beolvasBtn_Click"/>
         <Button x:Name="kiirasBtn" Content="Kiírás" HorizontalAlignment="Left" Height="22" Margin="257,103,0,0" VerticalAlignment="Top" Width="185" Click="kiirasBtn_Click"/>
-        <Button Content="Keresés" HorizontalAlignment="Left" Height="22" Margin="553,137,0,0" VerticalAlignment="Top" Width="172"/>
-        <Button Content="Megszámolás" HorizontalAlignment="Left" Height="22" Margin="257,294,0,0" VerticalAlignment="Top" Width="185"/>
-        <Button Content="Minimum / Maximum kiválasztása" HorizontalAlignment="Left" Height="22" Margin="257,402,0,0" VerticalAlignment="Top" Width="185"/>
-        <TextBox x:Name="beolvasTxtBx" HorizontalAlignment="Left" Height="276" Margin="33,137,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="172" IsReadOnly="True"/>
+        <Button x:Name="OKeresesBtn" Content="Keresés" HorizontalAlignment="Left" Height="22" Margin="553,137,0,0" VerticalAlignment="Top" Width="172" Click="OKeresesBtn_Click"/>
+        <TextBox x:Name="beolvasTxtBx" HorizontalAlignment="Left" Height="276" Margin="33,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" IsReadOnly="True"/>
         <Image HorizontalAlignment="Left" Height="208" Margin="488,217,0,0" VerticalAlignment="Top" Width="294" Source="https://www.revuepolitique.fr/wp-content/uploads/2022/11/shutterstock_2190840355-1.jpg"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="33,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <TextBox x:Name="kiirasTxtbox" HorizontalAlignment="Left" Height="18" Margin="257,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
-        <TextBox HorizontalAlignment="Left" Height="18" Margin="553,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <ComboBox HorizontalAlignment="Left" Height="22" Margin="257,368,0,0" VerticalAlignment="Top" Width="185">
-            <ComboBoxItem Content="Minimum"/>
-            <ComboBoxItem Content="Maximum"/>
-        </ComboBox>
+        <TextBox x:Name="fajlbeolvasTxt" HorizontalAlignment="Left" Height="30" Margin="33,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="kiirasTxtbox" HorizontalAlignment="Left" Height="30" Margin="257,59,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="185"/>
+        <TextBox x:Name="OTextbox" HorizontalAlignment="Left" Height="25" Margin="553,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
         <Label Content="Beolvasandó fájl neve:" HorizontalAlignment="Left" Height="27" Margin="33,23,0,0" VerticalAlignment="Top" Width="172" FontWeight="Bold"/>
         <Label Content="Fájl neve kiíráshoz:" HorizontalAlignment="Left" Height="28" Margin="248,36,0,0" VerticalAlignment="Top" Width="194" FontWeight="Bold"/>
-        <Label Content="Ország keresése:" HorizontalAlignment="Left" Height="35" Margin="545,59,0,0" VerticalAlignment="Top" Width="180"/>
-        <GroupBox HorizontalAlignment="Left" Height="127" Header="Mit számoljunk?" Margin="257,148,0,0" VerticalAlignment="Top" Width="185">
-            <StackPanel HorizontalAlignment="Left" Height="102" VerticalAlignment="Top" Width="156">
-                <RadioButton Content="dasda" HorizontalAlignment="Left"/>
-                <RadioButton Content="asdasas" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            </StackPanel>
-        </GroupBox>
-        <CheckBox Content="Találatok kijelölése a listában" HorizontalAlignment="Left" Height="18" Margin="553,114,0,0" VerticalAlignment="Top" Width="172"/>
-        <Label Content="Minimum vagy maximum?" HorizontalAlignment="Left" Height="25" Margin="257,338,0,0" VerticalAlignment="Top" Width="169"/>
+        <Label Content="Ország keresése:" HorizontalAlignment="Left" Height="27" Margin="553,53,0,0" VerticalAlignment="Top" Width="150"/>
+        <CheckBox x:Name="top" Content="Csak a top 5 eredmény" HorizontalAlignment="Left" Margin="553,117,0,0" VerticalAlignment="Top"/>
+        <Canvas Margin="10,0,0,-15">
+            <GroupBox Header="Adj meg egy évet:" Width="199" Height="162" Canvas.Left="250" Canvas.Top="180">
+                <StackPanel Margin="10">
+                    <TextBox x:Name="evTxt" Width="120" Margin="0,5,0,0"/>
+                    <RadioButton x:Name="mindenki" Content="Mindenki" Margin="0,5,0,0"/>
+                    <RadioButton x:Name="top10" Content="4-10. hely" Margin="0,2,0,0"/>
+                    <RadioButton x:Name="top3" Content="1-3. hely" Margin="0,2,0,0"/>
+                    <Button x:Name="HelyezesBtn" Content="Kiírás" Width="120" Height="24" Margin="0,5,0,0" Click="HelyezesBtn_Click"/>
+                </StackPanel>
+            </GroupBox>
+            <ComboBox x:Name="helyezesCombo" Canvas.Left="255" Canvas.Top="378" Width="145" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <ComboBoxItem Content="1"/>
+                <ComboBoxItem Content="2"/>
+                <ComboBoxItem Content="3"/>
+            </ComboBox>
+            <Label Content="Hányadik helyezett ország?" Canvas.Left="250" Canvas.Top="347" RenderTransformOrigin="-0.081,0.078" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button x:Name="HelyzetKeresesBtn" Content="Kiírás" Canvas.Left="255" Canvas.Top="405" Height="21" Width="145" HorizontalAlignment="Left" VerticalAlignment="Top" Click="HelyzetKeresesBtn_Click"/>
+        </Canvas>
 
     </Grid>
 </Window>
