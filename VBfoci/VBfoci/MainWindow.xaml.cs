@@ -16,25 +16,35 @@ using System.Windows.Shapes;
 
 namespace VBfoci
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
-            List<Resztvevo> resztvevok = new List<Resztvevo>();
-            StreamReader sr = new StreamReader("VBfoci.csv");
 
+        }
 
+        List<Resztvevo> resztvevok = new List<Resztvevo>();
+
+        private void beolvasBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string fajlnev = "VBfoci.csv";
+            StreamReader sr = new StreamReader(fajlnev, Encoding.Default);
             while (!sr.EndOfStream)
             {
                 string line = sr.ReadLine();
                 resztvevok.Add(new Resztvevo(line));
             }
             sr.Close();
+            beolvasTxtBx.Text = "A beolvasás sikeresen megtörtént.";
+        }
 
+        private void kiirasBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string fajlnev = kiirasTxtbox.Text;
+            StreamWriter sw = new StreamWriter(fajlnev);
+            sw.Close();
         }
     }
 }
