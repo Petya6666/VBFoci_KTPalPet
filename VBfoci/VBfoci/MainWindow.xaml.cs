@@ -28,7 +28,7 @@ namespace VBfoci
         List<Resztvevo> resztvevok = new List<Resztvevo>();
         List<string> mentendoSorok = new List<string>();
 
-        private void beolvasBtn_Click(object sender, RoutedEventArgs e)
+        private void beolvasBtn_Click(object sender, RoutedEventArgs e) //Ez a button beolvassa a fájlt és kiíratja hogy megtörtént a belovasás
         {
             string fajlnev = fajlbeolvasTxt.Text;
             StreamReader sr = new StreamReader(fajlnev, Encoding.Default);
@@ -44,7 +44,7 @@ namespace VBfoci
 
             int szamlalo = 0;
             int osszeseredmeny = 0;
-            for (int i = 0; i < resztvevok.Count; i++)
+            for (int i = 0; i < resztvevok.Count; i++) //kiszámolja Magyarország átlaghelyezését
             {
                 if (resztvevok[i].Orszag == "Magyarország")
                 {
@@ -55,7 +55,7 @@ namespace VBfoci
             beolvasTxtBx.Text += $"\nMagyaroszág átlaghelyezése: {osszeseredmeny/szamlalo}";
         }
 
-        private void kiirasBtn_Click(object sender, RoutedEventArgs e)
+        private void kiirasBtn_Click(object sender, RoutedEventArgs e) // ez írja ki külön fájlba az eredményeket
         {
             string fajlnev = kiirasTxtbox.Text;
             using (StreamWriter sw = new StreamWriter(fajlnev))
@@ -67,14 +67,14 @@ namespace VBfoci
             }
         }
 
-        private void OKeresesBtn_Click(object sender, RoutedEventArgs e)
+        private void OKeresesBtn_Click(object sender, RoutedEventArgs e) //Amikor beírunk egy országok akkor kiírja a szereplését
         {
             string orszag = OTextbox.Text;
             beolvasTxtBx.Text = $"{orszag} szereplései:\n";
 
             mentendoSorok.Add($"{orszag} szereplései:");
 
-            for (int i = 0; i < resztvevok.Count; i++)
+            for (int i = 0; i < resztvevok.Count; i++) 
             {
                 if (resztvevok[i].Orszag == orszag)
                 {
@@ -97,7 +97,7 @@ namespace VBfoci
             mentendoSorok.Add(""); // sorkihagyás a végére
         }
 
-        private void HelyezesBtn_Click(object sender, RoutedEventArgs e)
+        private void HelyezesBtn_Click(object sender, RoutedEventArgs e) //Amikor egy évet kiválasztunk és testre tudjuk szabni, hogy milyen helyezéseket értek el csapatok 
         {
             int ev = Convert.ToInt32(evTxt.Text);
             string eredmeny = $"Szűrés év szerint: {ev}\n";
@@ -125,7 +125,7 @@ namespace VBfoci
             mentendoSorok.Add(eredmeny); 
         }
 
-        private void HelyzetKeresesBtn_Click(object sender, RoutedEventArgs e)
+        private void HelyzetKeresesBtn_Click(object sender, RoutedEventArgs e)  //kiválasztjuk, hogy hanyadik helyezet és kiírja azt a helyezetteket
         {
             if (helyezesCombo.SelectedItem is ComboBoxItem selectedItem)
             {
@@ -133,7 +133,7 @@ namespace VBfoci
                 beolvasTxtBx.Text = $"{keresettHelyezes}. helyezettek listája:\n";
                 mentendoSorok.Add($"{keresettHelyezes}. helyezettek listája:"); 
 
-                var evSzerint = resztvevok
+                var evSzerint = resztvevok // Interneten találtuk és megkeresi a keresett helyezést és sorbaállítja
                     .Where(r => r.Helyezes == keresettHelyezes)
                     .OrderBy(r => r.VB_Idopont);
 
